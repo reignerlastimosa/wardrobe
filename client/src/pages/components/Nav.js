@@ -24,10 +24,10 @@ const Nav = () =>{
         <div className ={`nav ${navScroll===true? 'top':''}`}>
             <h2>Ward<span>Robe</span></h2>
             <ul>
-                <li><a href="HOME"> HOME </a></li>
-                <li><a href="SHOP"> SHOP</a></li>
+                <li><a href="/"> HOME </a></li>
+                <li><a href="/shop"> SHOP</a></li>
                 <li><a href="ANNOUNCEMENT"> ANNOUNCEMENT</a></li>
-                <li><a href="FEEDBACK">FEEDBACK </a></li>
+                <li><a href="/feedback">FEEDBACK </a></li>
                 <li><a href="CONTACT"> CONTACT</a></li>
 
             </ul>

@@ -37,7 +37,7 @@
     top:70%;
     left:50%;
     transform: translate(-50%,-50%);
-    z-index: 100;
+    z-index: 1;
 }
 
 
@@ -92,7 +92,7 @@
     margin-top:30px;
     height:300px;
     width:250px;
-    border:10px solid #e3e3e1;
+    
     cursor:pointer;
     border-radius: 3px;
     
@@ -113,5 +113,7 @@
 }
 
 .product:hover{
-    
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+    transition:300ms;
 }

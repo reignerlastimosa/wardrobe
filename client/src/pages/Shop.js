@@ -2,6 +2,7 @@ import Header from './components/Header';
 import Nav from './components/Nav';
 import Shopcarousel from './components/Shopcarousel';
 import Shopmain from './components/Shopmain';
+import Footer from './components/Footer';
 import "./Shop.css"
 
 const Shop = () =>{
@@ -11,7 +12,7 @@ const Shop = () =>{
             <Nav/>
             <Shopcarousel/>
             <Shopmain/>
-            
+            <Footer/>
         </div>
     )
 

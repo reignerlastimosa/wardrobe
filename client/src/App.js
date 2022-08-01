@@ -1,6 +1,7 @@
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import Home from './pages/Home';
 import Shop from './pages/Shop';
+import Feedback from './pages/Feedback';
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
     <Routes>  
       <Route exact path ="/" element={<Home/>}/> 
       <Route exact path ="/shop" element={<Shop/>}/> 
+      <Route exact path ="/feedback" element={<Feedback/>}/> 
      </Routes>
     </div>
     </BrowserRouter>
