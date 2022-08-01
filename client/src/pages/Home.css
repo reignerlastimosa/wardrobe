@@ -1,0 +1,297 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@200;400&family=Square+Peg&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
+
+body{
+    margin:0;
+    
+    font-family: 'Poppins', sans-serif;
+}
+.header{
+    background-color: rgb(45, 40, 40);
+    height:40px;
+    width:100%;
+    color:white;
+    font-family: 'Times New Roman', Times, serif;
+    
+}
+.header a{
+    float:right;
+    margin-right:2%;
+    color:white;
+    text-decoration: none;
+    margin-top:10px;
+    
+}
+.header a:hover{
+    color:rgb(251, 150, 167);
+    transition:300ms;
+}
+.nav{
+    position:fixed;
+    height:80px;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    width:100%;
+    background-color: white;
+    z-index:10;
+}
+
+.top{
+    top:0;
+}
+
+.nav h2{
+    font-family: 'Pacifico', cursive;
+}
+
+.nav button{
+    
+    background:none;
+    border:none;
+    padding:10px;
+    width:40px;
+}
+
+.nav button:hover{
+    background-color:#e3e3e1;
+    border-radius:50px;
+    color:rgb(251, 150, 167);
+    cursor:pointer;
+    transition:300ms;
+    
+}
+
+ul{
+    list-style: none;
+}
+ul li{
+    display:inline-block;
+    margin-right:30px;
+}
+ul a{
+    text-decoration: none;
+    color:black;
+    font-weight: bold;
+}
+
+ul a:hover{
+    color:rgb(251, 150, 167);
+    transition:300ms;
+}
+
+span{
+    color:rgb(251, 150, 167);
+}
+
+
+.homepage{
+    position:relative;
+    color:white;
+    height:500px;
+    
+}
+
+.homepage h1{
+   
+   padding-top:100px;
+   padding-left:200px;
+   font-size:40px;
+}
+
+.homepage::before{
+    content:'';
+    position:absolute;
+    background-image:url("./components/images/homepage.jpg");
+    background-size: cover;
+    background-position: center;
+    
+    width:100%;
+    height:100%;
+    
+    z-index:-3;
+    filter:brightness(70%);
+    
+    
+}
+
+
+
+.homepage button{
+    margin-left:200px;
+    margin-top:50px;
+    color:white;
+    background-color:rgb(251, 150, 167);
+    height:40px;
+    width:120px;
+    cursor:pointer;
+    border:none;
+    border-radius: 2px;
+    
+}
+
+.homeflex{
+    margin-top:30px;
+    height:300px;
+    display:flex;
+    justify-content: center;
+   
+}
+
+.homeflex div{
+    width:23%;
+    height:90%;
+    position:relative;
+    margin:10px;
+}
+
+.homeflex button{
+    position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border:none;
+  height:35px;
+  width:130px;
+  background-color:white;
+  border-radius: 2px;
+  cursor:pointer;
+    font-weight: bold;
+    
+}
+
+.homeflex button:hover{
+    background-color:rgb(251, 150, 167);
+    color:white;
+    transition:300ms;
+}
+
+.about{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin:50px;
+    
+    
+}
+
+.about h1{
+    font-weight: 500;
+    font-size: 40px;
+}
+
+.about p{
+    font-weight: 300;
+    word-spacing: 5px;
+}
+
+.about div{
+    margin:40px;
+}
+
+.about-1{
+    width:40%;
+}
+
+.about-2{
+    width:30%;
+}
+.about-3{
+    width:30%;
+}
+.about-4{
+    width:40%;
+}
+
+.new-products{
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    
+    
+}
+
+.homecarousel{
+    width:1000px;
+    height:500px;
+    overflow-y:hidden;
+    overflow-x:hidden;
+    display:flex;
+    margin:auto;
+    background-color: cornflowerblue;
+    border-radius: 5px;
+    scroll-behavior: smooth;
+    
+}
+
+
+.homecarousel .carousel{
+    flex:0 0 1000px;
+    display:inline-flex;
+    justify-content: center;
+   
+    
+   
+    
+}
+.carousel-links a{
+    text-decoration: none;
+}
+
+.homegrid{
+    margin-top:100px;
+    display:grid;
+    justify-content: center;
+    grid-template-columns: 25% 25% 25%;
+    grid-auto-rows: 300px;
+    grid-template-rows: minmax(150px, auto);
+}
+
+.homegrid div{
+    margin:8px;
+    cursor:pointer;
+}
+
+.homegrid div:hover{
+    filter:brightness(80%);
+    transition:300ms;
+}
+
+.grid-1{
+    grid-row:span 1;
+    grid-column:span 1;
+}
+
+.grid-2{
+    grid-row:span 1;
+    grid-column:span 1;
+}
+
+.grid-3{
+    grid-row:span 2;
+    grid-column:span 1;
+}
+
+.grid-4{
+    grid-column: span 2;
+}
+
+
+.footer{
+    background-color: rgb(45, 40, 40);
+    height:80px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    color:white;
+    margin-top:100px;
+}
+
+.footer p{
+    font-weight:300;
+    font-size:12px;
+}
+
