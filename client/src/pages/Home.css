@@ -78,6 +78,7 @@ ul a{
 
 ul a:hover{
     color:rgb(251, 150, 167);
+    font-family: 'Pacifico', cursive;
     transition:300ms;
 }
 
