@@ -28,7 +28,7 @@ const Nav = () =>{
                 <li><a href="/shop"> SHOP</a></li>
                 <li><a href="ANNOUNCEMENT"> ANNOUNCEMENT</a></li>
                 <li><a href="/feedback">FEEDBACK </a></li>
-                <li><a href="CONTACT"> CONTACT</a></li>
+                <li><a href="/contact"> CONTACT</a></li>
 
             </ul>
 

@@ -6,7 +6,7 @@ const Feedbackform = () =>{
                 <h1>We Would Like To Hear From You</h1>
             
                 <label>Reference Number:</label>
-                <input type="text" placeholder="1231231"/> 
+                <input type="text" placeholder="1231231" disabled/> 
                 <select>
                     <option>Very Bad</option>
                     <option>Bad</option>

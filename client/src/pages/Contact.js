@@ -3,7 +3,7 @@ import Nav from './components/Nav';
 import Contactpage from './components/Contactpage';
 import Contactform from './components/ContactForm';
 import Footer from './components/Footer';
-import "./Feedback.css"
+import "./Contact.css"
 
 
 

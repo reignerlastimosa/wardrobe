@@ -1,19 +1,14 @@
 const Contactform = () =>{
     return (
-        <div className="feedbackform">
+        <div className="contactform">
             <form>
-                <label id="get-in-touch">GET IN TOUCH</label>
-                <h1>We Would Like To Hear From You</h1>
+                <label id="get-in-touch">CONTACT US</label>
+                <h1>GET IN TOUCH</h1>
             
-                <label>Reference Number:</label>
-                <input type="text" placeholder="1231231"/> 
-                <select>
-                    <option>Very Bad</option>
-                    <option>Bad</option>
-                    <option>Fair</option>
-                    <option>Good</option>
-                    <option>Very Good</option>
-                </select> 
+                
+                <input type="text" placeholder="Please enter your Fullname"/> 
+                <input type="text" placeholder="Please enter your email here:"/>
+                
                 <textarea placeholder="Type your feedback here" /> 
                 <input type="submit"/>
             </form>

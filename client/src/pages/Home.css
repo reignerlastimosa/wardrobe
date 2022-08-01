@@ -36,6 +36,7 @@ body{
     width:100%;
     background-color: white;
     z-index:10;
+    
 }
 
 .top{
@@ -94,6 +95,129 @@ span{
     
 }
 
+.login{
+    background-color: white;
+    height:350px;
+    width:400px;
+    position:fixed;
+    top:45%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    border-radius: 2px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color:black;
+    visibility: hidden;
+    z-index:20;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    
+}
+
+.login-show{
+    visibility: visible;
+    
+}
+
+.login input{
+    width:60%;
+    height:35px;
+    margin:10px;
+    border:none;
+    background-color: rgba(232, 232, 232, 0.626);
+    padding-left:10px;
+}
+
+.login-header{
+    text-align: center;
+    position:relative;  
+    width:100%;  
+}
+
+.login-close{
+    position:absolute;
+    right:5%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    cursor:pointer;
+    background: none;
+    border:none;
+    color:rgb(251, 150, 167);
+}
+.login-btn{
+    color:white;
+    background-color:rgb(251, 150, 167);
+    height:40px;
+    width:60%;
+    cursor:pointer;
+    border:none;
+    border-radius: 2px;
+}
+
+.signup{
+    background-color: white;
+    height:450px;
+    width:400px;
+    position:fixed;
+    top:46%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    border-radius: 2px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color:black;
+    visibility: hidden;
+    z-index:20;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    
+}
+
+.signup-show{
+    visibility: visible;
+    
+}
+
+.signup input{
+    width:60%;
+    height:35px;
+    margin:10px;
+    border:none;
+    background-color: rgba(232, 232, 232, 0.626);
+    padding-left:10px;
+}
+
+.signup-header{
+    text-align: center;
+    position:relative;  
+    width:100%;  
+}
+
+.signup-close{
+    position:absolute;
+    right:5%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    cursor:pointer;
+    background: none;
+    border:none;
+    color:rgb(251, 150, 167);
+}
+.signup-btn{
+    color:white;
+    background-color:rgb(251, 150, 167);
+    height:40px;
+    width:60%;
+    cursor:pointer;
+    border:none;
+    border-radius: 2px;
+
+}
+
+
+
 .homepage h1{
    
    padding-top:100px;
@@ -119,7 +243,7 @@ span{
 
 
 
-.homepage button{
+.homepage-button{
     margin-left:200px;
     margin-top:50px;
     color:white;
