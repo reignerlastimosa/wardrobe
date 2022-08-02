@@ -1,13 +1,13 @@
 import Item from './Item';
 
 
-const Items = () =>{
+const Items = ({itemQuantity, setItemQuantity}) =>{
     return (
         <div className="items">
-            <Item/>
-            <Item/>
-            <Item/>
-            <Item/>
+            <Item itemQuantity={itemQuantity} setItemQuantity={setItemQuantity}/>
+            <Item itemQuantity={itemQuantity} setItemQuantity={setItemQuantity}/>
+            <Item itemQuantity={itemQuantity} setItemQuantity={setItemQuantity}/>
+            <Item itemQuantity={itemQuantity} setItemQuantity={setItemQuantity}/>
            
         </div>
     );

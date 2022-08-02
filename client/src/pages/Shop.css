@@ -79,7 +79,7 @@
 
 .products{
     width:100%;
-    
+    position:relative;
     display:flex;
     flex-wrap: wrap;
     
@@ -116,4 +116,81 @@
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
     transition:300ms;
+}
+
+.buy{
+    background-color: white;
+    height:600px;
+    width:900px;
+    position:fixed;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    border-radius: 2px;
+    display:flex;
+    visibility: hidden;
+    
+    align-items: center;
+    color:black;
+    
+    z-index:20;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.buy-show{
+    visibility:visible;
+}
+
+.buy-image{
+    width:50%;
+    height:100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.buy-details{
+    width:50%;
+    height:100%;
+    
+}
+
+.buy-details form{
+    margin:100px 50px 0 50px;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    
+    height:60%;
+}
+
+.buy-details input[type="submit"]{
+    background-color:rgb(251, 150, 167);
+    align-self: center;
+    width:70%;
+    height:40px;
+    border:none;
+    cursor:pointer;
+    color:white;
+    font-size:16px;
+}
+
+.buy-details h2{
+    margin:0;
+}
+
+.buy-quantity{
+    display:flex;
+    justify-content: space-between;
+    
+    width:45%;
+}
+
+.buy-quantity input[type="text"]{
+    width:20px;
+    border:1px solid black;
+}
+
+.buy-details p{
+    margin:0;
 }

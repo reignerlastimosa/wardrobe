@@ -18,7 +18,7 @@ const Order = () =>{
             <div className="subtotal-value">
                 <p>P513.00</p>
                 <p>P60.00</p>
-                <p>P573.00</p>
+                <h3>P573.00</h3>
             </div>
             </div>
             
