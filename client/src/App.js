@@ -3,6 +3,8 @@ import Home from './pages/Home';
 import Shop from './pages/Shop';
 import Feedback from './pages/Feedback';
 import Contact from './pages/Contact';
+import Profile from './pages/Profile';
+import Cart from './pages/Cart';
 
 function App() {
   return (
@@ -13,6 +15,8 @@ function App() {
       <Route exact path ="/shop" element={<Shop/>}/> 
       <Route exact path ="/feedback" element={<Feedback/>}/> 
       <Route exact path ="/contact" element={<Contact/>}/> 
+      <Route exact path ="/profile" element={<Profile/>}/> 
+      <Route exact path ="/cart" element={<Cart/>}/> 
      </Routes>
     </div>
     </BrowserRouter>

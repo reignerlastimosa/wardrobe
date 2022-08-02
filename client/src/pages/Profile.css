@@ -1,0 +1,102 @@
+
+
+.avatar{
+    display:flex;
+    
+    
+    height:200px;
+    margin:150px 200px 0 200px;
+}
+
+.avatarImage{
+    border-radius: 50%;
+    background-color: beige;
+    width:20%;
+    position:relative;
+    overflow: hidden;
+}
+
+.profile-edit{
+    position:absolute;
+    left:50%;
+    bottom:0;
+    transform:translate(-50%); 
+    background-color:rgb(251, 150, 167);
+    color:white;
+    font-weight: bold;
+    width:100%;
+    cursor:pointer;
+    height:40px;
+    
+    border:none;
+
+    
+ }
+
+.avatarInfo{
+    
+    margin:20px 0 0 150px;
+}
+.avatar h2{
+    margin:0;
+}
+.avatar p{
+   margin:0;
+}
+
+
+
+.profileform{
+    
+    margin:100px 200px 0 200px;
+    position:relative;
+    
+}
+
+.edit-profile{
+    position:absolute;
+    right:16%;
+    top:0;
+    color:white;
+    background-color:rgb(251, 150, 167);
+    height:35px;
+    width:100px;
+    cursor:pointer;
+    border:none;
+    border-radius: 2px;
+}
+
+.profileform form {
+    
+    margin:0 50px 0 50px;
+    display:flex;
+    
+}
+
+.profileform div{
+    display:flex;
+    flex-direction: column;
+    height:300px;
+    justify-content: space-around;
+    
+    
+
+}
+
+.profileInput input{
+    height:35px;
+    width:80%;
+    
+}
+
+.profileLabel{
+    width:30%;
+}
+
+.profileInput{
+    width:70%;
+    
+}
+
+
+
