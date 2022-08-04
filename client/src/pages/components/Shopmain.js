@@ -1,11 +1,15 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 
-import Product from './Product';
+
 import Carousel1 from './images/carousel1.jpg';
-const Shopmain = () =>{
 
-    const [productClicked, setProductClicked] = useState(false);
+
+
+
+const Shopmain = ({productCategory,product, setProduct, }) =>{
+
+    const [productClicked, setProductClicked,] = useState(false);
 
     const viewProduct = (e) =>{
         e.preventDefault();
@@ -18,6 +22,10 @@ const Shopmain = () =>{
     }
 
     
+   
+  
+
+    
     return (
         
         
@@ -26,22 +34,27 @@ const Shopmain = () =>{
             <div className="tabs">
                 <div className="category">
                     <select>
-                        <option>Shoes</option>
-                        <option>Dress</option>
-                        <option>Watch</option>
-                        <option>Sunglasses</option>
+                   {productCategory.map((product)=>{
+                    return(
+                        <option>{product.product_category}</option>
+                    )
+                   })};
+
                     </select>
                 </div>
             </div>
-
+          
             <div className="products">
+
                 <div className={`buy ${productClicked===true?'buy-show' : ''}`}>
                     <div className="buy-image">
                     <img src={Carousel1} width="90%" height="70%"/>
                     </div>
 
                     <div className="buy-details">
-
+                    <button onClick={viewProduct}className="buy-close-btn"type="button"> <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-x-square-fill" viewBox="0 0 16 16">
+                    <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm3.354 4.646L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 1 1 .708-.708z"/>
+                    </svg></button>
                     <form>
                     <div>  
                     <h2>Item 1</h2>
@@ -78,11 +91,30 @@ const Shopmain = () =>{
                     </div>
                 </div>
 
-                <Product onClick={viewProduct}/>
-                <Product onClick={viewProduct}/>
-                <Product onClick={viewProduct}/>
-                <Product onClick={viewProduct}/>
-                <Product onClick={viewProduct}/>
+
+               
+                {product.map((item)=>{
+                return (
+
+   
+                    <div className="product" onClick={viewProduct}>
+                        <div className="product-image">  
+                        
+                        </div>
+                        
+                        <div className="product-details">
+                            <h5>{item.product_name}</h5>
+                            <h5>{item.product_price}</h5>
+                        </div>
+                    </div>
+                );
+
+               })}
+                
+                   
+                
+                
+                
                 
             </div>
         </div>

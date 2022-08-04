@@ -137,6 +137,7 @@
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+
 .buy-show{
     visibility:visible;
 }
@@ -152,8 +153,22 @@
 .buy-details{
     width:50%;
     height:100%;
-    
+    position:relative;
 }
+
+.buy-close-btn{
+    position:absolute;
+    top:3%;
+    right:8%;
+    
+    width:30px;
+    height:30px;
+    background: none;
+    border:none;
+    color:rgb(251, 150, 167);
+    cursor:pointer;
+}
+
 
 .buy-details form{
     margin:100px 50px 0 50px;
