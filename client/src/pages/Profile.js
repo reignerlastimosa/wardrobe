@@ -11,8 +11,8 @@ const Profile = () =>{
         <div className="profile">
             <Header/>
             <Nav/>
-            <Avatar/>
-            <Profileform/>
+            <Avatar />
+            <Profileform />
             <Footer/>
         </div>
     );

@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 import axios from 'axios';
 
-const Nav = ({product,setProduct}) =>{
+const Nav = ({product,setProduct, searchKey, setSearchKey}) =>{
     
 
-    const[searchKey,setSearchKey] = useState('');
+    
     const searchProduct = async (e) =>{
         e.preventDefault();
         try{
@@ -12,6 +12,7 @@ const Nav = ({product,setProduct}) =>{
             searchKey
           })
           setProduct(response.data);
+          console.log(response.data);
 
         }
         catch(error){

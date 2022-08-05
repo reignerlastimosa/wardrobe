@@ -15,7 +15,7 @@ const Home = () =>{
         <div>
             <Header/>
             <Nav/>
-            <Homepage/>
+            <Homepage />
             <Homeflex/>
             <About/>
             <Homecarousel/>

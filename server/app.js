@@ -55,10 +55,21 @@ app.get("/product_category",(req,res)=>{
     });
 });
 
+app.get("/products/:product_category",(req,res)=>{
+    database.query("SELECT * from product where product_category = ?",[req.params.product_category], (err,result)=>{
+        if(!err){
+            res.send(result);
+        }
+        else{
+            throw err;
+        }
+    });
+});
+
 
 app.post("/search",async(req,res)=>{
 
-    let {searchKey} = req.body
+    let {searchKey} = req.body;
     database.query("SELECT * FROM product WHERE product_name LIKE ?",['%'+searchKey+'%'],(err,result)=>{
         if(!err){
             res.send(result);
@@ -67,10 +78,43 @@ app.post("/search",async(req,res)=>{
         else{
             throw err;
         }
-    });
+    }); 
+});
 
-    
-})
+app.post("/create_user", async(req,res)=>{
+    let {fullname, username, password, phone, address} = req.body;
+    let sql =`INSERT INTO user (fullname, username, password, phone,address) VALUES("${fullname}","${username}","${password}","${phone}","${address}")`;
+    database.query(sql,(err,result)=>{
+        if(!err){
+            console.log("successfully created new user");
+        }
+        else{
+            throw err;
+        }
+    });
+});
+
+app.post("/login", (req,res)=>{
+    let {username, password} = req.body;
+    let sql = `SELECT * FROM user where username ="${username}" and password = "${password}"`;
+    database.query(sql,(err,result)=>{
+        if(!err){
+            if(result.length>0){
+                console.log("successfully logged in");
+                console.log(result);
+                res.send(result);
+            }
+            else{
+                console.log("no account found");
+            }
+        }
+        else{
+            throw err;
+        }
+    });
+});
+
+
 app.listen(5000, ()=>{
     console.log("Listening on port 5000");
 });

@@ -3,11 +3,11 @@ import { useState, useEffect } from "react";
 
 
 import Carousel1 from './images/carousel1.jpg';
+import axios from 'axios';
 
 
 
-
-const Shopmain = ({productCategory,product, setProduct, }) =>{
+const Shopmain = ({productCategory,product, setProduct,loadProduct}) =>{
 
     const [productClicked, setProductClicked,] = useState(false);
 
@@ -21,7 +21,20 @@ const Shopmain = ({productCategory,product, setProduct, }) =>{
         }
     }
 
-    
+    const handleSelectValue = async(e) =>{
+        
+        const selectedValue = e.target.value;
+
+        if(selectedValue=='All'){
+            loadProduct();
+        }
+        else{
+        const response = await axios.get(`http://localhost:5000/products/${selectedValue}`);
+        setProduct(response.data);
+        }
+        
+        
+    }
    
   
 
@@ -33,9 +46,11 @@ const Shopmain = ({productCategory,product, setProduct, }) =>{
         <div className="shopmain">
             <div className="tabs">
                 <div className="category">
-                    <select>
+                    <select onChange={handleSelectValue}>
+                        <option>All</option>
                    {productCategory.map((product)=>{
                     return(
+                        
                         <option>{product.product_category}</option>
                     )
                    })};

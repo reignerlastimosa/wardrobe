@@ -14,6 +14,8 @@ const Shop = () =>{
     const [productCategory, setProductCategory] = useState([]);
     const [product,setProduct] = useState([]);
     
+    
+
     const loadCategory = async ()=>{
         const product_category = await axios.get('http://localhost:5000/product_category');
         setProductCategory(product_category.data);
@@ -27,14 +29,12 @@ const Shop = () =>{
         console.log(product);
     }
 
-    
-  
-
+   
 
     useEffect(()=>{
         loadCategory();
         loadProduct();
-        
+       
     },[]);
 
 
@@ -46,7 +46,7 @@ const Shop = () =>{
             <Header/>
             <Nav searchKey={searchKey} setSearchKey={setSearchKey} product={product} setProduct={setProduct}/>
             <Shopcarousel/>
-            <Shopmain product={product} setProduct={setProduct} productCategory={productCategory}/>
+            <Shopmain product={product} setProduct={setProduct} productCategory={productCategory} loadProduct={loadProduct}/>
             <Footer/>
         </div>
     )

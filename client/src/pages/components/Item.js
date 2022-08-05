@@ -7,7 +7,7 @@ const Item = ({itemQuantity, setItemQuantity}) =>{
     }
     const removeItem = ()=>{
         
-        if (itemQuantity>0){
+        if (itemQuantity>1){
             setItemQuantity(itemQuantity - 1);
         }
         else{
