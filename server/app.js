@@ -4,6 +4,7 @@ const express = require('express');
 const cors = require('cors');
 const app = express();
 const database = require('./database');
+const session = require('express-session');
 
 database.connect((err)=>{
     if(!err){
@@ -13,6 +14,14 @@ database.connect((err)=>{
         throw err;
     }
 });
+
+app.use(session({
+    secret: 'reigner',
+    resave: true,
+    saveUninitialized: true
+}));
+
+
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 app.use(cors());
@@ -103,10 +112,29 @@ app.post("/login", (req,res)=>{
                 console.log("successfully logged in");
                 console.log(result);
                 res.send(result);
+
+                req.session.loggedIn = true;
+                req.session.userId = result[0].user_id;
+                req.session.fullname = result[0].fullname;
+                console.log(result[0].user_id);
             }
             else{
                 console.log("no account found");
             }
+        }
+        else{
+            throw err;
+        }
+    });
+});
+
+app.post("/contact",(req,res)=>{
+    let {fullname, email, feedback} = req.body;
+    let sql =`INSERT INTO contact(fullname, email, feedback) VALUES("${fullname}", "${email}", "${feedback}")`;
+    database.query(sql,(err,result)=>{
+        if(!err){
+            res.send(result);
+            console.log("successfully inserted contact");
         }
         else{
             throw err;
